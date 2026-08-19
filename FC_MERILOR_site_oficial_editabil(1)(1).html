@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FC MERILOR — Site Oficial</title>
+<style>
+:root{--r:#d71920;--bg:#080a0d;--card:#131820;--line:#2a323d;--txt:#f5f6f8;--mut:#aeb7c4;--g:#168b4b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--txt);font:15px Arial,sans-serif}
+a{text-decoration:none;color:inherit}.wrap{max-width:1150px;margin:auto;padding:0 22px}
+.top{background:#050607;border-bottom:1px solid #202630;color:#9fa8b5;padding:9px 0;font-size:12px}.top .wrap{display:flex;justify-content:space-between}
+header{position:sticky;top:0;z-index:10;background:#090b0eee;backdrop-filter:blur(10px);border-bottom:1px solid #252c35}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:.12em;display:flex;gap:12px;align-items:center}.mark{width:43px;height:50px;display:grid;place-items:center;background:#12161d;border:2px solid #d8dbe0;clip-path:polygon(50% 0,100% 15%,90% 78%,50% 100%,10% 78%,0 15%)}nav{display:flex;gap:18px}nav a{font-size:12px;font-weight:800;text-transform:uppercase;color:#c5ccd5}nav a:hover{color:#fff}
+.hero{min-height:510px;display:grid;grid-template-columns:1.15fr .85fr;gap:35px;align-items:center;padding:65px 0}.red{color:#ff3b45;font-weight:900;letter-spacing:.15em;text-transform:uppercase;font-size:12px}h1{font-size:clamp(48px,8vw,90px);line-height:.88;margin:15px 0 22px;letter-spacing:-.06em}.hero p{color:var(--mut);line-height:1.7;max-width:650px;font-size:17px}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.btn{border:1px solid #3a434f;border-radius:10px;padding:12px 16px;font-weight:900;display:inline-block}.primary{background:var(--r);border-color:var(--r)}.green{background:var(--g);border-color:var(--g)}
+.bigcrest{width:min(350px,85vw);aspect-ratio:1/1.08;margin:auto;display:grid;place-items:center;filter:drop-shadow(0 20px 28px #0009)}.shield{position:absolute;width:100%;height:100%;clip-path:polygon(50% 0,92% 13%,87% 72%,50% 100%,13% 72%,8% 13%);background:linear-gradient(145deg,#222a33,#06080b);border:7px solid #d9dce0}.inside{width:86%;height:86%;clip-path:polygon(50% 0,92% 13%,87% 72%,50% 100%,13% 72%,8% 13%);background:#0b0e13;display:flex;flex-direction:column;align-items:center;justify-content:center}.inside b{font-size:55px}.inside strong{letter-spacing:.2em;font-size:22px}.inside span{margin-top:24px;letter-spacing:.35em;color:#ccd1d8}
+section{padding:65px 0;border-top:1px solid #171c22}h2{font-size:34px;margin:0 0 8px}.sub{color:#8f98a5;margin:0 0 25px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}.num{font-size:48px;font-weight:1000}.label{color:#9fa8b5;text-transform:uppercase;font-size:11px;letter-spacing:.12em;font-weight:800;margin-top:5px}
+.fixture{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;text-align:center;gap:12px;padding:23px 0;border-bottom:1px solid var(--line)}.fixture:last-child{border:0}.team{font-size:18px;font-weight:900}.vs{color:#929ba8;font-weight:900}.pill{display:inline-block;margin-top:6px;padding:5px 8px;border-radius:20px;background:#29303a;font-size:10px;font-weight:900;text-transform:uppercase}
+.history{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.era{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px;text-align:center}.eraimg{height:190px;background:#080b0f;border-radius:11px;display:grid;place-items:center;overflow:hidden}.eraimg img{width:100%;height:100%;object-fit:contain}.placeholder{color:#7f8996;font-size:12px;padding:15px}.era b{display:block;margin:12px 0 7px}.current{color:#76dca3;font-size:10px;font-weight:900;text-transform:uppercase}
+video{width:100%;display:block;max-height:600px;background:#000;border-radius:16px}.videobox{background:#050607;border:1px solid var(--line);border-radius:16px;overflow:hidden}.empty{aspect-ratio:16/9;display:grid;place-items:center;text-align:center;color:#7f8996;padding:25px}
+.channel{display:flex;justify-content:space-between;align-items:center;gap:20px;background:#0d2117;border:1px solid #235636;border-radius:16px;padding:25px}.channel h3{font-size:23px;margin:0 0 6px}.mut{color:var(--mut)}
+.admin{background:#0c0f14}.admingrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}.form h3{margin-top:0}label{display:block;color:#aeb7c4;text-transform:uppercase;font-size:11px;font-weight:800;margin:13px 0 6px;letter-spacing:.08em}input[type=number],input[type=text]{width:100%;padding:12px;background:#080b0f;color:#fff;border:1px solid #37404b;border-radius:9px}input[type=file]{width:100%;color:#aeb7c4}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.note{color:#7f8996;font-size:12px;line-height:1.5}
+footer{border-top:1px solid #252c34;color:#7f8996;padding:30px 0;font-size:12px}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.stats,.admingrid{grid-template-columns:1fr}.history{grid-template-columns:1fr 1fr}nav{display:none}}
+@media(max-width:520px){.history{grid-template-columns:1fr}.channel{display:block}.top{display:none}}
+</style>
+</head>
+<body>
+<div class="top"><div class="wrap"><span>FC MERILOR • FONDAT ÎN 2026</span><span id="date"></span></div></div>
+<header><div class="wrap nav"><a class="brand" href="#home"><span class="mark">FM</span> FC MERILOR</a><nav><a href="#club">Club</a><a href="#cup">Supercupa</a><a href="#history">Istorie</a><a href="#trailer">Trailer</a><a href="#wa">WhatsApp</a><a href="#admin">Editare</a></nav></div></header>
+
+<main>
+<section id="home"><div class="wrap hero"><div><div class="red">Site oficial • 2026</div><h1>FC<br>MERILOR</h1><p>Un club construit de la zero, cu identitate proprie, ambiție și o poveste care abia începe. Rezultatele se schimbă; istoria rămâne.</p><div class="buttons"><a class="btn primary" href="#cup">Supercupa Fieni</a><a class="btn green" href="#wa">Canal WhatsApp</a></div></div><div class="bigcrest"><div class="shield"></div><div class="inside"><b>FM</b><strong>FC MERILOR</strong><span>2026</span></div></div></div></section>
+
+<section id="club"><div class="wrap"><h2>Clubul pe scurt</h2><p class="sub">Informații publice despre echipă — fără statistici personale ale căpitanului.</p><div class="stats"><div class="stat"><div class="num" id="wins">17</div><div class="label">Victorii ale echipei</div></div><div class="stat"><div class="num">2026</div><div class="label">Fondată</div></div><div class="stat"><div class="num" style="font-size:32px">Theodor</div><div class="label">Căpitan</div></div></div><div class="card" style="margin-top:16px"><h3>Identitatea clubului</h3><p class="mut">FC MERILOR este o echipă locală construită în jurul prieteniei, competiției și progresului. Fiecare meci adaugă o nouă pagină în istoria clubului.</p></div></div></section>
+
+<section id="cup"><div class="wrap"><h2>🏆 Supercupa Fieni</h2><p class="sub">Semifinalele competiției.</p><div class="card"><div class="fixture"><div class="team">FC MERILOR</div><div><div class="vs">VS</div><span class="pill">Semifinala 1</span></div><div class="team">FC KOK</div></div><div class="fixture"><div class="team">FC KOBIEȘTI</div><div><div class="vs">VS</div><span class="pill">Semifinala 2</span></div><div class="team">FC SPORTING FAȚA BLOCULUI</div></div><p class="mut" style="margin:18px 0 0">📍 Fieni, Dâmbovița • 30 minute/meci • arbitru + VAR</p></div></div></section>
+
+<section id="history"><div class="wrap"><h2>Istoria emblemelor</h2><p class="sub">Cele patru etape ale identității vizuale a clubului.</p><div class="history" id="historyGrid"></div></div></section>
+
+<section id="trailer"><div class="wrap"><h2>🎬 Trailer FC MERILOR</h2><p class="sub">Trailerul poate fi schimbat oricând din panoul de editare.</p><div class="videobox" id="videoBox"><div class="empty">Niciun trailer încărcat.<br>Folosește panoul „Editare site”.</div></div></div></section>
+
+<section id="wa"><div class="wrap"><h2>📣 FC MERILOR Oficial</h2><p class="sub">Canalul oficial de WhatsApp al clubului.</p><div class="channel"><div><h3>FC MERILOR Oficial</h3><div class="mut"><span id="followers">29</span> urmăritori • Actualizări ale clubului</div></div><a id="waBtn" class="btn green" href="#" target="_blank" rel="noopener">Intră pe canal →</a></div></div></section>
+
+<section id="admin" class="admin"><div class="wrap"><h2>⚙️ Editare site</h2><p class="sub">Tu poți actualiza site-ul fără să modifici codul.</p><div class="admingrid">
+<div class="form"><h3>Statistici publice</h3><label>Victorii echipă</label><input id="winsIn" type="number" min="0" value="17"><label>Urmăritori WhatsApp</label><input id="folIn" type="number" min="0" value="29"><div class="actions"><button class="btn primary" onclick="saveStats()">Salvează</button><button class="btn" onclick="resetStats()">Reset</button></div></div>
+<div class="form"><h3>Canal WhatsApp</h3><label>Linkul real al canalului</label><input id="waIn" type="text" placeholder="Lipește aici linkul canalului tău"><div class="actions"><button class="btn green" onclick="saveWA()">Salvează linkul</button></div><p class="note">Nu am inventat linkul canalului. Îl introduci tu o singură dată.</p></div>
+<div class="form"><h3>🎬 Schimbă trailerul</h3><label>Fișier video</label><input id="videoIn" type="file" accept="video/*"><div class="actions"><button class="btn primary" onclick="saveVideo()">Folosește acest video</button><button class="btn" onclick="deleteVideo()">Șterge</button></div><p class="note">Trailerul este păstrat local în browser. Pe alt dispozitiv trebuie încărcat din nou.</p></div>
+<div class="form"><h3>🛡️ Încarcă cele 4 embleme</h3><p class="note">Încarcă imaginile în ordinea ta: 1 = cea mai veche, 4 = actuala. Ele vor apărea automat în „Istoria emblemelor”.</p><div id="crestInputs"></div><div class="actions"><button class="btn primary" onclick="saveCrests()">Salvează emblemele</button><button class="btn" onclick="deleteCrests()">Șterge</button></div></div>
+</div></div></section>
+</main>
+<footer><div class="wrap">© 2026 FC MERILOR • Fondat în 2026 • Site local al echipei</div></footer>
+
+<script>
+const DB='FCMERILOR_EDIT',STORE='files';let db;
+function openDB(){return new Promise((ok,no)=>{let r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE);r.onsuccess=()=>{db=r.result;ok()};r.onerror=()=>no(r.error)})}
+function put(k,v){return new Promise((ok,no)=>{let t=db.transaction(STORE,'readwrite');t.objectStore(STORE).put(v,k);t.oncomplete=ok;t.onerror=()=>no(t.error)})}
+function get(k){return new Promise((ok,no)=>{let r=db.transaction(STORE).objectStore(STORE).get(k);r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error)})}
+function del(k){return new Promise((ok,no)=>{let t=db.transaction(STORE,'readwrite');t.objectStore(STORE).delete(k);t.oncomplete=ok;t.onerror=()=>no(t.error)})}
+function load(){let w=localStorage.fmWins||17,f=localStorage.fmFol||29,wa=localStorage.fmWA||'';wins.textContent=w;winsIn.value=w;followers.textContent=f;folIn.value=f;waIn.value=wa;waBtn.href=wa||'#'}
+function saveStats(){localStorage.fmWins=Math.max(0,+winsIn.value||0);localStorage.fmFol=Math.max(0,+folIn.value||0);load()}
+function resetStats(){delete localStorage.fmWins;delete localStorage.fmFol;load()}
+function saveWA(){localStorage.fmWA=waIn.value.trim();load();alert('Link salvat.')}
+async function saveVideo(){let f=videoIn.files[0];if(!f)return alert('Alege un video.');await put('video',f);renderVideo()}
+async function deleteVideo(){await del('video');renderVideo()}
+async function renderVideo(){let f=await get('video');videoBox.innerHTML=f?`<video controls playsinline src="${URL.createObjectURL(f)}"></video>`:'<div class="empty">Niciun trailer încărcat.<br>Folosește panoul „Editare site”.</div>'}
+function makeInputs(){for(let i=0;i<4;i++)crestInputs.innerHTML+=`<label>Emblema ${i+1}</label><input type="file" accept="image/*" id="crest${i}">`}
+async function saveCrests(){for(let i=0;i<4;i++){let f=document.getElementById('crest'+i).files[0];if(f)await put('c'+i,f)}renderCrests()}
+async function deleteCrests(){for(let i=0;i<4;i++)await del('c'+i);renderCrests()}
+async function renderCrests(){historyGrid.innerHTML='';let names=['Emblema 1 — începutul','Emblema 2 — a doua identitate','Emblema 3 — a treia identitate','Emblema actuală — 2026'];for(let i=0;i<4;i++){let f=await get('c'+i);let img=f?`<img src="${URL.createObjectURL(f)}" alt="">`:'<div class="placeholder">Încarcă imaginea din panoul de editare.</div>';historyGrid.innerHTML+=`<div class="era"><div class="eraimg">${img}</div><b>${names[i]}</b>${i==3?'<div class="current">Emblemă actuală</div>':''}</div>`}}
+(async()=>{await openDB();makeInputs();load();date.textContent=new Date().toLocaleDateString('ro-RO',{day:'2-digit',month:'long',year:'numeric'});await renderCrests();await renderVideo()})();
+</script>
+</body>
+</html>
